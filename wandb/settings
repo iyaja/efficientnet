@@ -1,0 +1,6 @@
+[default]
+entity = ajayuppili
+project = efficientnet
+base_url = https://api.wandb.ai
+disabled = true
+

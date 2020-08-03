@@ -1,0 +1,19 @@
+#!/bin/bash
+ 
+#SBATCH --job-name="efficientnet"
+#SBATCH --output="efficientnet.%j.%N.out"
+#SBATCH --error="efficientnet.%j.%N.err"
+#SBATCH --partition=gpu
+#SBATCH --time=24:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16
+#SBATCH --sockets-per-node=1
+#SBATCH --cores-per-socket=4
+#SBATCH --threads-per-core=4
+#SBATCH --mem-per-cpu=1200
+#SBATCH --export=ALL
+#SBATCH --gres=gpu:v100:1
+
+source activate fastai
+cd efficientnet
+wandb agent --count 10 ajayuppili/efficientnet/bqrm7zvt 

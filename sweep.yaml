@@ -1,0 +1,5 @@
+program: train.py
+method: random
+parameters:
+  efficientnet_b:
+    values: [1,2,3,4,5,6,7]
